@@ -25,7 +25,7 @@ android {
         val apiKey = gradleLocalProperties(rootDir).getProperty("API_KEY")
         buildConfigField("String", "API_KEY", apiKey)
         buildConfigField("String","BASE_URL","\"https://api.spoonacular.com/\"")
-        buildConfigField("String","BASE_IMAGE_URL","\"https://spoonacular.com/cdn/ingredients_100x100\"")
+        buildConfigField("String","BASE_IMAGE_URL","\"https://spoonacular.com/cdn/ingredients_100x100/\"")
     }
 
     buildTypes {
@@ -92,5 +92,9 @@ dependencies {
 
     // Jsoup
     implementation (libs.jsoup)
+
+    // ViewPager2
+    implementation(libs.androidx.viewpager2)
+
 
 }
