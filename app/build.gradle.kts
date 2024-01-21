@@ -96,5 +96,8 @@ dependencies {
     // ViewPager2
     implementation(libs.androidx.viewpager2)
 
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
+
 
 }

@@ -26,6 +26,8 @@ okhttp = "4.9.1"
 interceptor = "4.9.1"
 room = "2.4.2"
 jsoup = "1.14.3"
+viewpager2 = "1.0.0"
+datastore-preferences = "1.0.0"
 
 
 [libraries]
@@ -53,6 +55,8 @@ room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences" }
 
 
 [plugins]
