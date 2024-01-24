@@ -24,8 +24,12 @@ android {
 
         val apiKey = gradleLocalProperties(rootDir).getProperty("API_KEY")
         buildConfigField("String", "API_KEY", apiKey)
-        buildConfigField("String","BASE_URL","\"https://api.spoonacular.com/\"")
-        buildConfigField("String","BASE_IMAGE_URL","\"https://spoonacular.com/cdn/ingredients_100x100/\"")
+        buildConfigField("String", "BASE_URL", "\"https://api.spoonacular.com/\"")
+        buildConfigField(
+            "String",
+            "BASE_IMAGE_URL",
+            "\"https://spoonacular.com/cdn/ingredients_100x100/\""
+        )
     }
 
     buildTypes {
@@ -44,7 +48,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures{
+    buildFeatures {
         buildConfig = true
         viewBinding = true
     }
@@ -91,13 +95,19 @@ dependencies {
     ksp(libs.room.compiler)
 
     // Jsoup
-    implementation (libs.jsoup)
+    implementation(libs.jsoup)
 
     // ViewPager2
     implementation(libs.androidx.viewpager2)
 
     // DataStore
     implementation(libs.androidx.datastore.preferences)
+
+    // Swipe Refresh Layout
+    implementation(libs.androidx.swiperefreshlayout)
+
+    // Flex Box
+    implementation (libs.flexbox)
 
 
 }

@@ -28,6 +28,8 @@ room = "2.6.1"
 jsoup = "1.14.3"
 viewpager2 = "1.0.0"
 datastore-preferences = "1.0.0"
+swiperefreshlayout = "1.2.0-alpha01"
+flexbox = "3.0.0"
 
 
 [libraries]
@@ -57,6 +59,8 @@ room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences" }
+androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
 
 
 [plugins]
