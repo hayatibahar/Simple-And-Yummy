@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hayatibahar.simpleandyummy.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.hayatibahar.simpleandyummy.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/groceryFragment"
+        android:name="com.hayatibahar.simpleandyummy.ui.grocery.GroceryFragment"
+        android:label="GroceryFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hayatibahar.simpleandyummy.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.hayatibahar.simpleandyummy.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.hayatibahar.simpleandyummy.ui.filter.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+</navigation>

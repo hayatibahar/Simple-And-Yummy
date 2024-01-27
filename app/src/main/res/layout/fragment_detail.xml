@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/addToGroceriesBtn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="ui.detail.DetailFragment">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/detail_back_button"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/favoriteIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="@string/detail_back_button"
+                android:src="@drawable/baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recipeNameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/merriweather_regular"
+                android:maxLines="2"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/backIv"
+                tools:text="Spicy Arrabiata Pasta" />
+
+            <ImageView
+                android:id="@+id/timeIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/detail_time_icon"
+                android:src="@drawable/baseline_access_time_24"
+                app:layout_constraintStart_toStartOf="@id/backIv"
+                app:layout_constraintTop_toBottomOf="@id/recipeNameTv" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/redhattext_medium"
+                android:textColor="?colorSecondary"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/timeIv"
+                app:layout_constraintStart_toEndOf="@id/timeIv"
+                app:layout_constraintTop_toTopOf="@id/timeIv"
+                tools:text="30 - 40 min" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/recipeCard"
+                style="@style/roundedCardView"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timeIv">
+
+                <ImageView
+                    android:id="@+id/recipeIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description_recipe_image"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/test_image" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/aboutTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/merriweather_bold"
+                android:text="@string/detail_about_this_meal"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeCard" />
+
+            <TextView
+                android:id="@+id/summaryTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/redhattext_regular"
+                android:textColor="?colorSecondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutTv"
+                tools:text="A simple and fast pasta recipe with a subtle touch of spiceness. Easy to prepare, and perfect for your afternoon meal." />
+
+            <Button
+                android:id="@+id/ingredientsTv"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/merriweather_bold"
+                android:text="@string/detail_ingredients"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/summaryTv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ingredientsRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ingredientsTv" />
+
+            <Button
+                android:id="@+id/recipeTv"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/merriweather_bold"
+                android:text="@string/detail_recipe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/summaryTv" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/instructionVp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="24dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recipeTv" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addToGroceriesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="12dp"
+        android:fontFamily="@font/redhattext_bold"
+        android:text="@string/detail_add_to_groceries"
+        android:textSize="18sp" />
+
+</RelativeLayout>

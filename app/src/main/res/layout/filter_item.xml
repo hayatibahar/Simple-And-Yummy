@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/filter_selector"
+    android:layout_margin="2dp"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?colorSecondary"
+        android:fontFamily="@font/redhattext_medium"
+        android:textSize="14sp"
+        android:maxLines="1"
+        tools:text="Gluten Free" />
+
+</FrameLayout>

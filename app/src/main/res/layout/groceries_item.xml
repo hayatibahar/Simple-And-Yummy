@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp">
+
+    <CheckBox
+        android:id="@+id/itemCb"
+        style="@style/customCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:fontFamily="@font/redhattext_medium"
+        android:maxLines="3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/itemCb"
+        app:layout_constraintTop_toTopOf="@id/itemCb"
+        tools:text="Cherry tomatoes" />
+
+    <TextView
+        android:id="@+id/itemAmountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/redhattext_medium"
+        android:textColor="?colorSecondary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/itemCb"
+        app:layout_constraintStart_toStartOf="@id/itemNameTv"
+        app:layout_constraintTop_toBottomOf="@id/itemNameTv"
+        tools:text="15" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

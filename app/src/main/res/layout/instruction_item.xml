@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="24dp">
+
+    <androidx.cardview.widget.CardView
+        style="@style/roundedCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/stepNumberTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhattext_medium"
+                android:maxLines="2"
+                android:textColor="?colorSecondary"
+                android:textSize="16sp"
+                tools:text="Step 1" />
+
+
+            <TextView
+                android:id="@+id/stepDescriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/redhattext_medium"
+                android:textSize="16sp"
+                tools:text="Preheat your grill to high. Line a baking tray with foil  place the cherry tomatoes red peppers on it cut side up with a drizzle of oil over the top. Place the tray under the grill for 10-12 minutes or until they’ve gone a little crisp and golden. Once cooked set them aside. Cooking them in this way enhances the sweetness and all round flavour." />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>

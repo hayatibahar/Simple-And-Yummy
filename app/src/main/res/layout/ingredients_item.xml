@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="12dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ingredientTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/redhattext_medium"
+            android:textSize="16sp"
+            tools:text="White wine vinegar" />
+
+        <TextView
+            android:id="@+id/amountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/redhattext_medium"
+            android:textColor="?colorSecondary"
+            android:textSize="14sp"
+            tools:text="2 tbsp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ingredientIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@string/ingredient_image"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/test_image" />
+
+</LinearLayout>
