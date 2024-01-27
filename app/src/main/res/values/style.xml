@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedCardView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="customCheckbox" parent="">
+        <item name="buttonTint">?colorPrimary</item>
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>
