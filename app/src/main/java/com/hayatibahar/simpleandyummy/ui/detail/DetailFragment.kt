@@ -100,18 +100,20 @@ class DetailFragment : Fragment() {
 
     private fun showAlertDialog(ingredients : List<Ingredient>) {
         AlertDialog.Builder(requireContext())
-            .setTitle("Add Ingredients to Grocery List")
-            .setMessage("Choose an option")
-            .setPositiveButton("Replace with Cart") { _, _ ->
+            .setTitle("Grocery List")
+            .setMessage("Replace list or add to it?")
+            .setPositiveButton("Replace List") { _, _ ->
                 viewModel.deleteGroceries()
                 viewModel.addToGroceries(ingredients)
             }
-            .setNegativeButton("Add to Cart") { _, _ ->
+            .setNegativeButton("Add to List") { _, _ ->
                 viewModel.addToGroceries(ingredients)
             }
             .setNeutralButton("Cancel", null)
             .show()
     }
+
+
 
     private fun initAdapter() {
         binding.ingredientsRv.adapter = ingredientsAdapter
