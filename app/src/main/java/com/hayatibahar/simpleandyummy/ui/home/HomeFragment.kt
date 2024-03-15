@@ -113,14 +113,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun handleSuccess(homeData: HomeData) {
-        if (homeData.shouldScrollUp){
-            binding.recipeRv.scrollToPosition(0)
-            homeData.shouldScrollUp = false
-        }
-        if (homeData.noMatch){
-            showToast(requireContext(), "No matching result found")
-            homeData.noMatch = false
-        }
+        homeData.scrollIfNeeded(binding.recipeRv)
+        homeData.showToastIfNeeded(requireContext())
         adapter.updateRecipes(homeData.recipes)
         binding.progressBar.makeGone()
     }
